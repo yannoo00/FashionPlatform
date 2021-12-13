@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+  <html lang ="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content ="width=device-width,user-scalable=no, initial-scal=1">
+    <title>SIS Service Platform</title>
+    <link rel="icon" type="image/png" href=" https://w.namu.la/s/5d8c08a3dd277645c31657307c11388da5758b4b53a199e2342d7657998755084eb09301a78a96af346dfb61f9f0987dac8f4b1410391c9827b3625e85634897f744e8b72a1dd7f45197a6779c6b2a3e" sizes="16x16">
+    <link href="casualStyle.css" rel="stylesheet" type="text/css" media="screen and (min-width:769px)"/>
+    <link href="homeStyleM.css"  rel="stylesheet" type="text/css"media="screen and (max-width:768px)"/>
+        
+    
+    <style>
+        .grid{
+            display: grid;
+            margin: 0 auto;
+            grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));
+            grid-gap:10px;
+        
+        }
+        figure:hover{
+            box-shadow: 3px 3px 5px rgba(51, 126, 224, 0.6)
+        }
+        figure{
+            width: 190px;
+            display: inline-block;
+            border:1px solid rgba(0,0,0,0.2);
+            margin: 5px;
+            margin-bottom: 15px;
+            padding:5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .item{
+            width:100%;
+            border-radius: 10px;
+            float: left;
+            overflow: hidden;
+        
+        }
+        #main{
+            margin-block-start: 10px;
+            margin-left: 30px;
+        }
+
+
+        #darken-background{
+            position: absolute;
+            top:0; left:0; right:0;
+            height: 100%;
+
+            display:none;
+            background: rgba(0,0,0,0.9);
+            z-index: 10000;
+            overflow-y: scroll;
+        }
+        #lightbox{
+            width:700px;
+            margin : 20px auto; padding:15px;
+            border:1px solid #333333;
+            border-radius: 5px;
+            background: white;
+            box-shadow: 0 5px 5px rgba(34, 25, 25, 0.4);
+            text-align: center;
+        }
+        
+    </style>
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.0/imagesloaded.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+    <script>
+    $(document).ready(function () { 
+
+       
+
+        $('.grid').imagesLoaded(function(){
+            $('.grid').masonry({
+                itemSelector : '.card',
+                columnWidth : 230,
+
+                fitwidth : true
+            });
+
+        });
+
+        
+        function hideMenu() {
+            alert("무단 복사 방지를 위해 우클릭은 금지되었습니다.");
+            return false;
+        }
+        document.oncontextmenu =hideMenu;
+   
+
+        function showLightBox(){
+            $('#darken-background').show();
+            $('#darken-background').css('top',$(window).scrollTop());
+            $('body').css('overflow','hidden');
+        }
+        
+        function hideLightBox(){
+            $('#darken-background').hide();
+            $('body').css('overflow','');
+        }
+
+        $('#darken-background').click(function () {
+            hideLightBox();
+        });
+
+        $('.item').click(function (event) { 
+            var source = $(event.target).attr('src');
+            $('#boxImg').attr('src',source)
+            showLightBox();
+        });
+
+        $('#lightbox').click(function (event) {
+            event.stopPropagation()
+        });
+
+       /*
+        var cardList = $('.card');
+
+        var appendDocument = function() {
+          
+            for(i=15;i<23;i++){
+            $('').appendTo('.grid');
+            }
+                
+            
+        };
+
+        $(window).scroll(function () {
+            var scrollHeight = $(window).scrollTop() + $(window).height();
+            var documentHeight = $(document).height();
+
+            if( scrollHeight == documentHeight){
+              appendDocument();
+
+            }
+        });
+        */
+
+    });
+    </script>
+  </head>
+
+
+
+  <body>
+
+        <headr>
+                <div id ="domain">
+                    <h1><a href ="home.html">Mode: Avance</a></h1>
+                </div>
+        </headr>
+
+
+        <nav id="nav">
+            <ul>
+                <li><a href ="hot.html">HOT</a></li>
+                <li><a href ="new.html">NEW</a></li>
+                <li><a href ="community.html">COMMUNITY</a></li>
+         
+                <li><a href ="login.html">LOG-IN</a></li>
+            </ul>    
+         </nav>
+
+   <div id='main'>
+         <div class ="grid">
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual1.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual19.png">
+                <figcaption> @giiiiiyong</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual3.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual20.png">
+                <figcaption> @giiiiiyong</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual18.png">
+                <figcaption> @giiiiiyong</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual6.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual17.png">
+                <figcaption> @giiiiiyong</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual8.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual9.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual21.png">
+                <figcaption> @giiiiiyong</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual11.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual23.png">
+                <figcaption> @zzang9daddy</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual13.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual15.png">
+                <figcaption> @giiiiiyong</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual14.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+            
+            <figure class ="card">
+                <img class= "item" src = "img/casual16.png">
+                <figcaption> @giiiiiyong</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual9.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual22.png">
+                <figcaption> @yannoo_sung</figcaption>
+            </figure>
+
+            <figure class ="card">
+                <img class= "item" src = "img/casual11.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+                    
+            <figure class ="card">
+                <img class= "item" src = "img/casual2.jpeg">
+                <figcaption> Vetements 22f/w</figcaption>
+            </figure>
+
+            
+        </div>
+    
+    </div> <!-- main-->
+
+    <div id='darken-background'>
+        <div id='lightbox'>
+            <img id="boxImg" width='400px' >
+        </div>
+    </div>
+   
+
+    <footer>
+        <br>
+        <br>
+        <h1>Mode: Avance</h1>
+        <p>Seoul, Republic Of Korea . Yannoo corp . 10.28.21</p>
+        <div> 
+            <a href = "advierse.html"target ='_blank'> 광고 및 제휴</a> /
+            <a href = "personal.html"target ='_blank'> 개인정보 처리 및 방침</a>
+        </div>
+        <br>
+        <br>
+    </footer>
+
+    
+ </body>
+  
+  </html>

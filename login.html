@@ -1,0 +1,86 @@
+<!DOCTYPE HTML>
+  <html lang ="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content ="width=device-width,user-scalable=yes, initial-scal=1">
+    <title>SIS Service Platform</title>
+    <link rel="icon" type="image/png" href=" https://w.namu.la/s/5d8c08a3dd277645c31657307c11388da5758b4b53a199e2342d7657998755084eb09301a78a96af346dfb61f9f0987dac8f4b1410391c9827b3625e85634897f744e8b72a1dd7f45197a6779c6b2a3e" sizes="16x16">
+    <link href="loginstyle.css"  media="screen and (min-width:769px)" rel="stylesheet" type="text/css"/>
+    <link href="loginStyleM.css" media="screen and (max-width:768px)" rel="stylesheet" type="text/css"/>
+
+
+    <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script> 
+    window.onload=function(){
+        document.getElementById('submit').onclick = function(e) {
+            e.preventDefault();
+            var key = 0;
+            var ID = document.getElementById('id_').value;
+            var pass = document.getElementById('pass_').value;
+
+            if (ID === "yannoo" && pass === "yann00") {
+                //alert("Login Succeed");
+                 location.href='home.html';
+            }
+            else if(ID === '' || pass === ''){
+                alert("Please Enter Your ID or Pwd");
+            }
+            else{
+                alert("Login Failed");
+            }
+        }
+    }
+
+   
+    </script>
+
+  </head>
+
+
+
+  <body>
+      
+        <headr>
+                <div id ="domain">
+                    <h1><a href ="home.html">Mode: Avance</a></h1>
+                </div>
+        </headr>
+
+
+  
+
+        <Main>
+
+            <div class='contents'>
+                <div id='login'>
+                    <form>
+                        <input type="text" id="id_" name="email" class="text-field" placeholder="ID">
+                        <input type="password"  id="pass_" name="password" class="text-field" placeholder="PWD">
+                        <br>
+                        <input type="submit" id="submit" value="Login" class="submit-btn">
+                        <br>
+                        <input type="submit" value="Register" class="submit-btn">
+                    </form>
+                </div>
+            </div>
+        </Main>
+
+
+   
+    </body>
+
+    <footer>
+        <br>
+        <br>
+        <h1>Mode: Avance</h1>
+        <p>Seoul, Republic Of Korea . Yannoo corp . 10.28.21</p>
+        <div> 
+            <a href ="advierse.html" target ='_blank'> 광고 및 제휴</a> /
+            <a href = "personal.html"target ='_blank'> 개인정보 처리 및 방침</a>
+        </div>
+        <br>
+        <br>
+    </footer>
+
+  
+  </html>

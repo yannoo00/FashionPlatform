@@ -1,0 +1,95 @@
+
+        *{
+            margin: 0; padding : 0;
+        }
+        
+        body{
+            margin:0;
+        }
+
+        Main{
+            margin: auto;
+            width : 768px;
+            height : 1660px;
+            box-shadow : -60px 0px 100px -90px #000000, 60px 0px 100px -90px #000000;
+        }
+
+        #post{
+            width : 768px;  height : 1080px;
+        }
+
+        #caption{
+            float:right;
+            width : 368px; height: 1080px;
+            margin-right : 10px; margin-top: 10px;
+        }
+
+        #subCaption{
+            margin-left: 20px; margin-right: 20px; 
+        }
+  
+        #domain{       
+            border:0;
+            margin:0;
+            padding : 0;
+            text-align: center;
+            height : 180px;
+        }
+
+        #domain > h1 a{
+            text-decoration: none;
+            font-size: 1em;
+            line-height: 180px;
+            color: #3754d6;
+        }
+
+        #nav{
+            width:768px;
+            position : sticky;
+            top :0;
+        }
+                
+        #nav ul{
+            background-color: white;
+            box-shadow : 0px 4px 4px -4px darkgrey;
+            margin: 0;
+            padding: 0;
+            list-style-type:none;
+            text-align: center;
+        }
+
+        #nav ul li{
+      
+            margin: 20px;
+        }
+
+        #nav ul li a{
+            text-decoration: none;
+            font-weight: bold;
+            color:black;
+        }
+
+        #nav ul li a:hover{
+            color: #3754d6;
+        }
+
+        .frame img{
+            float:left;
+        }
+
+        footer{
+            margin-top: 15px;
+            font-size: smaller;
+            background-color: rgb(34, 35, 39);
+            color:lightgrey;
+            float:left;
+            width:768px;
+            text-align: center;
+
+        }
+
+        footer div a{
+            text-decoration: none;
+            color:darkgrey;
+            font-weight:bold;
+        }

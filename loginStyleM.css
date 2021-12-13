@@ -1,0 +1,109 @@
+*{
+    margin: 0; padding : 0;
+}
+
+body{
+    margin:0;
+    background-color:#385bf8;
+}
+
+Main{
+    background-color:#385bf8;
+    margin: auto;
+    width : 1080px; 
+}
+
+
+#domain{       
+    border:0;
+    margin:0;
+    padding : 0;
+    text-align: center;
+    height : 180px;
+    background-color: white;
+}
+
+#domain > h1 a{
+    text-decoration: none;
+    font-size: 1em;
+    line-height: 180px;
+    color: #3754d6;
+}
+
+#nav{
+    position : sticky;
+    top :0;
+    
+}
+        
+#nav ul{
+    background-color: white;
+    box-shadow : 0px 4px 4px -4px darkgrey;
+    margin: 0;
+    padding: 0;
+    list-style-type:none;
+    text-align: center;
+}
+
+#nav ul li{
+  
+    margin: 20px;
+}
+
+#nav ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+}
+
+#nav ul li a:hover{
+    color: #3754d6;
+}
+
+
+#login{
+    position: absolute;
+    height:300px; width:500px;                       
+    margin-top:-125px; margin-left:-250px;            
+    left:50%; top:50%;
+    background-color: rgb(197, 197, 197);
+}
+
+form{
+    padding-top : 80px;
+    text-align: center;
+}
+
+.text-field{
+    font-size : 14px;
+    padding : 10px;
+    border:none;
+}
+
+.submit-btn{
+    width : 388px;
+    font-size:18px;
+    padding:10px;
+    margin-top : 8px;
+    background-color:#385bf8;
+    color:white;
+    border:none;
+}
+
+footer{
+    margin-top: 15px;
+    font-size: smaller;
+    background-color: rgb(34, 35, 39);
+    color:lightgrey;
+    float:left;
+    width:100%;
+    text-align: center;
+    position:absolute;
+    bottom : 0;
+}
+
+footer div a{
+    text-decoration: none;
+    color:darkgrey;
+    font-weight:bold;
+}

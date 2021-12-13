@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0;
+	padding: 20px;
+	background: #ffffff;
+	font-size: 14px;
+	color: #000;
+	text-align:justify;
+	line-height:1.7em;
+	}
+
+dl, dt, dd, ul, ol, li, p {
+	list-style: none;
+	margin: 0;
+  	padding: 0;
+	}
+
+h1 { font-size:30px; text-align: center; margin-bottom: 40px; }
+h2 { margin-top: 50px; }
+p { margin-bottom: 20px;}
+
+table { width: 100%; border: 0;}
+table th { background-color: #999999;}
+table td { background-color: #e8e6e6;}
+table th:first-child { width: 30%;}
+table td:first-child { background-color: #ccc;}
+
+.privacy_box { max-width: 800px; margin: 0 auto; border: 3px solid #d2d2d2; padding: 40px;}
+.privacy_box .gray { background-color: #f1f1f1; padding: 20px;}
